@@ -1,0 +1,50 @@
+{
+  "name": "clip-extractor",
+  "version": "1.0.0",
+  "description": "A tool to extract video clips and stills.",
+  "main": "main.js",
+  "author": "iammasont",
+  "license": "ISC",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --windows",
+    "build:mac": "electron-builder --mac"
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.iammasont.clipextractor",
+    "productName": "CLIP_EXTRACTOR",
+    "files": [
+      "main.js",
+      "renderer.js",
+      "preload.js",
+      "index.html",
+      "styles.css",
+      "fonts/"
+    ],
+    "extraResources": [
+      {
+        "from": "bin",
+        "to": "bin",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "clip.ico"
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "icon": "clip.icns"
+    }
+  }
+}
+
