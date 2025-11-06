@@ -1,0 +1,20 @@
+# Dependencies
+/node_modules
+
+# System files
+.DS_Store
+
+# Build files
+/dist
+
+# Logs
+/logs
+
+# Cache
+/cache
+
+# Temp
+/temp
+
+# Config
+/config
